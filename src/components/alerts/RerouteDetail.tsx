@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useSupplyStore } from '../../store/useSupplyStore';
 import { apiClient, isMockMode } from '../../api/client';
-import type { Reroute } from '../../types';
 import { format, parseISO } from 'date-fns';
-import { Check, X, ArrowRight, Shield, Map as MapIcon, DollarSign, Ruler, Clock } from 'lucide-react';
+import { Check, X, ArrowRight, Shield, DollarSign, Ruler, Clock } from 'lucide-react';
 import { clsx } from 'clsx';
 
 interface RerouteDetailProps {

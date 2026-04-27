@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MapContainer, TileLayer, ZoomControl, Polygon, Polyline, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useSupplyStore } from '../../store/useSupplyStore';
 import { useQuery } from '@tanstack/react-query';
 import { apiClient, isMockMode } from '../../api/client';
-import type { Shipment, Disruption } from '../../types';
 import { generateMockShipments, MOCK_DISRUPTIONS } from '../../mocks/mockData';
 
 // Fix Leaflet default icon paths broken by bundlers

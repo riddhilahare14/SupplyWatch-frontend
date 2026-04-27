@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSupplyStore } from '../../store/useSupplyStore';
-import { format, parseISO, differenceInMinutes } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { ArrowUpRight, AlertCircle, CheckCircle, Clock } from 'lucide-react';
-import { Shipment } from '../../types';
+import type { Shipment } from '../../types';
 
 interface ShipmentsTableProps {
   filters: {

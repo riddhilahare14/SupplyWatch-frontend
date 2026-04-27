@@ -3,11 +3,9 @@ import { useSupplyStore } from '../store/useSupplyStore';
 import { useQuery } from '@tanstack/react-query';
 import { apiClient, isMockMode } from '../api/client';
 import { MOCK_REROUTES } from '../mocks/mockData';
-import type { Reroute } from '../types';
 import { format, parseISO, formatDistanceToNow } from 'date-fns';
 import { AlertTriangle, CheckCircle, Check, X, DollarSign, Ruler, Clock, Shield } from 'lucide-react';
 
-const getRiskColor = (r: number) => r > 0.7 ? '#ef4444' : r > 0.4 ? '#f59e0b' : '#22c55e';
 
 const AlertsPage: React.FC = () => {
   const { pendingReroutes, setPendingReroutes, decideReroute, shipments } = useSupplyStore();

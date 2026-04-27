@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { Shipment, Disruption, Reroute, WSMessageType } from '../types';
+import type { Shipment, Disruption, Reroute } from '../types';
 
 interface SupplyState {
   // Live Data

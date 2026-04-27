@@ -2,8 +2,6 @@ import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import type { Shipment } from '../../types';
-import { Truck } from 'lucide-react';
-import { renderToString } from 'react-dom/server';
 
 interface TruckMarkerProps {
   shipment: Shipment;
@@ -48,13 +46,13 @@ const TruckMarker: React.FC<TruckMarkerProps> = ({ shipment, livePosition, liveR
       <Popup className="custom-popup">
         <div className="p-2">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-bold text-slate-100">${shipment.id}</span>
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded" style="background: ${color}20; color: ${color}">
-              ${(risk * 100).toFixed(0)}% RISK
+            <span className="text-sm font-bold text-slate-100">{shipment.id}</span>
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded" style={{ background: `${color}20`, color: color }}>
+              {(risk * 100).toFixed(0)}% RISK
             </span>
           </div>
           <div className="text-[10px] text-slate-400">
-            Speed: ${livePosition?.speed_kmh?.toFixed(1) ?? shipment.speed_kmh?.toFixed(1) ?? 0} km/h
+            Speed: {livePosition?.speed_kmh?.toFixed(1) ?? shipment.speed_kmh?.toFixed(1) ?? 0} km/h
           </div>
         </div>
       </Popup>

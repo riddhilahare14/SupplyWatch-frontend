@@ -2,10 +2,9 @@ import React from 'react';
 import { useSupplyStore } from '../../store/useSupplyStore';
 import { useQuery } from '@tanstack/react-query';
 import { apiClient, isMockMode } from '../../api/client';
-import type { Reroute } from '../../types';
 import { MOCK_REROUTES } from '../../mocks/mockData';
 import { formatDistanceToNow, parseISO } from 'date-fns';
-import { AlertTriangle, CheckCircle, Clock, MoreVertical } from 'lucide-react';
+import { AlertTriangle, CheckCircle } from 'lucide-react';
 import { clsx } from 'clsx';
 
 interface AlertFeedProps {
