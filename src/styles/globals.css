@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 /* Reset & base */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -6,14 +8,14 @@ html, body, #root {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 body {
-  background-color: #020617;
-  color: #f8fafc;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f6f7fb;
+  color: #0b1220;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow: auto;
 }
 
 /* Tailwind directives */
@@ -32,7 +34,7 @@ body {
 .leaflet-container {
   width: 100%;
   height: 100%;
-  background: #020617 !important;
+  background: #e9edf5 !important;
 }
 
 .leaflet-control-zoom a {
