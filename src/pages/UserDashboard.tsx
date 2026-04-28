@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useFleetSimulation } from '../hooks/useFleetSimulation';
 import UserRouteMap from '../components/map/UserRouteMap';
 
@@ -53,6 +54,7 @@ const UserDashboard: React.FC = () => {
         </div>
         <div className="sw-user-selector">
           <div className="sw-pill">{paused ? 'Paused' : 'Realtime'}</div>
+          <Link to="/admin" className="sw-btn ghost">Switch to Admin</Link>
           <select value={selectedId} onChange={(e) => setSelectedId(e.target.value)}>
             {fleet.map((truck) => (
               <option key={truck.id} value={truck.id}>{truck.id} - {truck.from} to {truck.to}</option>

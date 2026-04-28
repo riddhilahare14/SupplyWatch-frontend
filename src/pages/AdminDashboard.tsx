@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BarChart2, Bell, LayoutGrid, LifeBuoy, LogOut, Search, Settings, Truck } from 'lucide-react';
 import { useFleetSimulation } from '../hooks/useFleetSimulation';
 
@@ -80,6 +81,7 @@ const AdminDashboard: React.FC = () => {
 
             <div className="sw-top-actions">
               <div className="sw-pill">{optimizeState === 'running' ? 'Optimizing' : 'Live'}</div>
+              <Link to="/user" className="sw-btn ghost">Switch to User</Link>
               <Bell size={18} />
               <div className="sw-avatar">
                 <div className="sw-avatar-circle">RM</div>
